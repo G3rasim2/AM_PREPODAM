@@ -1,0 +1,258 @@
+.nav
+	display: flex
+	justify-content: space-between
+	align-items: center
+	& img
+		width: 88px
+		z-index: 100
+	&__city
+		font-size: 14px
+		color: #fff
+		z-index: 100
+	&__phone
+		display: none
+	&__wrapper
+		display: none
+	&__wrapper-active
+		position: absolute
+		top: 0
+		left: 0
+		display: flex
+		flex-direction: column
+		align-items: center
+		background: #25262a
+		height: 480px
+		width: 100%
+		padding-top: 130px
+		text-align: center
+	&__button
+		position: relative
+		width: 55px
+		height: 55px
+		border-radius: 50%
+		z-index: 100
+		cursor: pointer
+		& span,
+		& span:before,
+		& span:after
+			position: absolute
+			top: calc(50% - 2px)
+			left: calc(50% - 20px)
+			width: 40px
+			height: 4px
+			background-color: #fff
+			transition: all 0.2s
+		& span:before
+			content: ''
+			top: 11px
+		& span:after
+			content: ''
+			top: -11px
+	&__button-active
+		& span
+			background-color: transparent
+		& span:before,
+		& span:after
+			border-radius: 50px
+			height: 5px
+			top: 0
+		& span:before
+			transform: rotate(45deg)
+		& span:after
+			transform: rotate(-45deg)
+	&__list,
+	&__block
+		width: 100%
+		& a
+			display: block
+			color: #fff
+			font-size: 16px
+			font-weight: 400
+			margin-bottom: 30px
+			transition: .2s
+			&:hover,
+			&:focus
+				color: #fe8057
+	&__list
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 1px
+			background: #ffffff
+	&__block
+		margin-top: 35px
+		display: flex
+		flex-direction: column
+		align-items: center
+		& .nav__btn
+			margin: 0
+			font-size: 12px
+			display: flex
+			justify-content: center
+			padding: 7px 28px
+			border: 2px solid #fe8057
+			border-radius: 5px
+			text-transform: uppercase
+			cursor: pointer
+			order: 2
+			transition: .2s
+			&:hover,
+			&:focus
+				background: #fe8057
+				color: #fff
+	&__btn--d
+		display: none
+		transition: .2s
+
+@media (min-width: 1024px)
+	.nav
+		& img
+			width: auto
+		&__city
+			font-size: 14px
+			order: 1
+		&__phone
+			display: block
+			font-size: 14px
+			color: #fff
+			order: 1
+			& img
+				margin-right: 10px
+		&__city,
+		&__phone
+			border-bottom: 1px solid transparent
+			&:hover,
+			&:focus
+				border-bottom: 1px solid #fe8057
+		&__wrapper
+			display: flex
+			align-items: center
+			order: 2
+		&__button
+			order: 2
+		&__wrapper-active
+			position: relative
+			display: flex
+			flex-direction: row
+			align-items: center
+			background: transparent
+			height: auto
+			width: auto
+			padding-top: 0
+			& .nav__block
+				display: flex
+				align-items: center
+				justify-content: center
+				position: absolute
+				top: 50px
+				right: -70px
+				background: #fff
+		&__list,
+		&__block
+			width: auto
+			& a
+				width: auto
+				font-size: 14px
+				font-weight: 400
+				margin-bottom: auto
+				border-bottom: 1px solid transparent
+				&:hover,
+				&:focus
+					color: #fff
+					border-bottom: 1px solid #fe8057
+		&__list
+			display: flex
+			justify-content: space-between
+			width: 300px
+			&::before
+				display: none
+		&__block
+			margin-top: auto
+			padding: 15px 20px
+			border-radius: 5px
+			border-top-right-radius: 0
+			display: none
+			& a
+				color: #000000
+				text-align: left
+				margin-left: auto
+				border: none
+				&:hover,
+				&:focus
+					border: none
+					color: #fe8057
+			& .nav__btn
+				display: none
+		&__btn--d
+			display: block
+			color: #fff
+			font-size: 12px
+			display: flex
+			justify-content: center
+			padding: 7px 16px
+			margin-left: 20px
+			border: 2px solid #fe8057
+			border-radius: 5px
+			text-transform: uppercase
+			cursor: pointer
+			order: 2
+			&:hover,
+			&:focus
+				background: #fe8057
+				color: #fff
+
+@media (min-width: 1440px)
+	.nav
+		&__city
+			font-size: 16px
+		&__phone
+			font-size: 16px
+		&__button
+			display: none
+		&__wrapper-active
+			position: relative
+			display: flex
+			flex-direction: row
+			align-items: center
+			background: transparent
+			height: auto
+			width: auto
+			padding-top: 0
+			& .nav__block
+				position: relative
+				top: auto
+				right: auto
+				background: transparent
+			& a
+				font-size: 16px
+		&__block ul
+			display: flex
+			justify-content: space-between
+			width: 170px
+		&__list
+			width: 340px
+		&__block
+			margin-top: auto
+			padding: 0
+			border-radius: 5px
+			border-top-right-radius: 0
+			display: flex
+			align-items: center
+			margin: 0
+			order: 3
+			& a
+				color: #fff
+				border-bottom: 1px solid transparent
+				&:hover,
+				&:focus
+					color: #fff
+					border-bottom: 1px solid #fe8057
+		&__btn--d
+			padding: 7px 16px
+			margin-right: 50px
+			margin-left: 70px
+			order: 2

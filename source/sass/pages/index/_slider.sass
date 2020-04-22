@@ -1,0 +1,83 @@
+.slider
+	margin-top: 50px
+	margin-bottom: 60px
+	& a
+		display: none
+	& h2
+		font-size: 16px
+		font-weight: 500
+		text-transform: uppercase
+		text-align: center
+		color: #4e93e1
+		margin-bottom: 20px
+	& img
+		transform: translateY(8px)
+	&__item
+		position: relative
+		cursor: pointer
+		&:hover::before
+			transform: translateY(-230px)
+		&::before
+			content: ''
+			position: absolute
+			top: 240px
+			left: calc(50% - 145px)
+			width: 290px
+			height: 400px
+			background: rgba(#000, .5)
+			transition: .2s
+			z-index: 10
+		& p
+			position: absolute
+			bottom: 0
+			left: 20%
+			color: #fff
+			text-align: center
+			width: 60%
+			font-size: 18px
+			z-index: 10
+
+@media (min-width: 1024px)
+	.slider
+		margin-top: 110px
+		margin-bottom: 130px
+		& a
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 561px
+			height: 51px
+			border: 2px solid #fe8057
+			border-radius: 50px
+			margin: 0 auto
+			color: #fe8057
+			font-size: 18px
+			font-weight: 600
+			margin-bottom: 100px
+			transition: .2s
+			&:hover,
+			&:focus
+				background: #fe8057
+				color: #fff
+		& h2
+			font-size: 24px
+			margin-bottom: 50px
+
+@media (min-width: 1440px)
+	.slider
+		&__item
+			& img
+			transform: translateY(12px)
+			&:hover::before
+				transform: translateY(-335px)
+			&::before
+				top: 350px
+				left: calc(50% - 200px)
+				width: 400px
+				height: 460px
+			& p
+				bottom: 0
+				left: 25%
+				width: 50%
+				font-size: 20px
+				margin-bottom: 30px
